@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --page-max-width: 1260px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  max-width: var(--page-max-width);
+  color: var(--foreground);
+  background: url(https://cdn.discordapp.com/assets/homepage/background-art__2__720.png);
+  background-position: 0 0;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 24px;
+  position: relative;
+}
+.hero_image{
+  width: 500px;
+}
