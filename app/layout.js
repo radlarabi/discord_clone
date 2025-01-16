@@ -1,6 +1,28 @@
 import { Geist, Geist_Mono,DM_Sans } from "next/font/google";
 import Providers from "./providers";
 import "./globals.css";
+import localFont  from 'next/font/local'
+
+const abcgintonord = localFont({
+  src: [
+    {
+      path: '../public/fonts/abcgintonord.woff',
+      weight: '800',
+      style: 'normal'
+    }
+  ],
+  variable: '--font-abcgintonord'
+})
+
+const ggSans = localFont({
+  src: [
+    {
+      path: '../public/fonts/ggSans.woff',
+      style: 'normal'
+    }
+  ],
+  variable: '--font-ggsans'
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +48,7 @@ export default function RootLayout({ children, session }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${dmSans.className}`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dmSans.className} ${abcgintonord.variable} ${ggSans.variable} `}
         suppressHydrationWarning
       >
         <Providers session={session}>
